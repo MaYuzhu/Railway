@@ -24,8 +24,8 @@
       <div class="content">
         <div style="width:96%;margin:8px auto">
           <div class="sousuo">
-            <input type="text" placeholder="请输入站名,如'济南站'">
-            <div class="sou">
+            <input id="city_search" type="text" placeholder="请输入站名,如'济南站'">
+            <div @click="show_city" class="sou">
               <img src="../../static/warningList/sou1.svg" alt="">
             </div>
           </div>
@@ -42,7 +42,7 @@
             <td>{{1+index+(current-1)*display}}</td>
             <td>{{item.projname}}</td>
             <td>{{item.alarm_reason}}</td>
-            <td>未处理</td>
+            <td>未处理{{projcode}}</td>
             <td>{{item.alarm_time}}</td>
           </tr>
           <!--<tr>
@@ -116,7 +116,8 @@
           totalPages: 0,     // 记录总条数
           display: 5,   // 每页显示条数
           current: 1,   // 当前的页数
-          textData:[]
+          textData:[],
+          projcode:null
         }},
       methods: {
         pagechange:function(currentPage){
@@ -148,7 +149,7 @@
           $.ajax({
             type: 'get',
             async: false,
-            data:{pageToken:c},
+            data:{projcode:vm.projcode,pageToken:c},
             cache: true,//36.110.66.214:50001
             url: url + '/zzcismp/alarm/getDeviceAlarmDetail.shtml',
             dataType: 'jsonp',
@@ -159,6 +160,25 @@
             error: function () {}
           })
         },
+        //按站名搜索
+        show_city(){
+          let $s = $('#city_search').val()
+          let reg_q = RegExp(/青岛/)
+          if(reg_q.test($s)){
+            this.textData = this.textData.filter(function (item) {
+              return item.projcode == '37020010'
+            })
+            this.projcode = '37020010'
+          }
+          let reg_j = RegExp(/济南/)
+          if(reg_j.test($s)){
+            this.textData = this.textData.filter(function (item) {
+              return item.projcode == '37020011'
+            })
+            this.projcode = '37020011'
+            alert('济南站没有异常数据')
+          }
+        }
         },
 
       components: {
@@ -229,6 +249,7 @@
           line-height 17px
           text-align center
           transform translate(1px,-1px)
+          cursor pointer
           img
             width 70%
             height 70%

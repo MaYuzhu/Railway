@@ -1,0 +1,330 @@
+{
+  "AllCount":[
+    {
+      "count": {
+        "data_warning_num": 28,
+        "device_exception_num": 12,
+        "data_early_warning_num": 3
+      },
+      "project_name": "济南站"
+    },
+    {
+      "count": {
+        "data_warning_num": 18,
+        "device_exception_num": 10,
+        "data_early_warning_num": 20
+      },
+      "project_name": "潍坊站"
+    },
+    {
+      "count": {
+        "data_warning_num": 2,
+        "device_exception_num": 5,
+        "data_early_warning_num": 7
+      },
+      "project_name": "泰安站"
+    },
+    {
+      "count": {
+        "data_warning_num": 0,
+        "device_exception_num": 5,
+        "data_early_warning_num": 7
+      },
+      "project_name": "菏泽站"
+    },
+    {
+      "count": {
+        "data_warning_num": 25,
+        "device_exception_num": 9,
+        "data_early_warning_num": 2
+      },
+      "project_name": "青岛站"
+    },
+    {
+      "count": {
+        "data_warning_num": 2,
+        "device_exception_num": 5,
+        "data_early_warning_num": 7
+      },
+      "project_name": "临沂站"
+    },
+    {
+      "count": {
+        "data_warning_num": 2,
+        "device_exception_num": 5,
+        "data_early_warning_num": 7
+      },
+      "project_name": "烟台站"
+    },
+    {
+      "count": {
+        "data_warning_num": 2,
+        "device_exception_num": 5,
+        "data_early_warning_num": 0
+      },
+      "project_name": "临清站"
+    }
+  ],
+  "AllEnv":[
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 1
+        },
+        {
+          "type": "T",
+          "level": 2
+        },
+        {
+          "type": "K",
+          "level": 3
+        },
+        {
+          "type": "F",
+          "level": 2
+        }
+      ],
+      "project_name": "济南站"
+    },
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 1
+        },
+        {
+          "type": "T",
+          "level": 1
+        },
+        {
+          "type": "K",
+          "level": 2
+        },
+        {
+          "type": "F",
+          "level": 3
+        }
+      ],
+      "project_name": "潍坊站"
+    },
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 3
+        },
+        {
+          "type": "T",
+          "level": 2
+        },
+        {
+          "type": "K",
+          "level": 1
+        },
+        {
+          "type": "F",
+          "level": 1
+        }
+      ],
+      "project_name": "泰安站"
+    },
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 1
+        },
+        {
+          "type": "T",
+          "level": 2
+        },
+        {
+          "type": "K",
+          "level": 3
+        },
+        {
+          "type": "F",
+          "level": 2
+        }
+      ],
+      "project_name": "菏泽站"
+    },
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 1
+        },
+        {
+          "type": "T",
+          "level": 1
+        },
+        {
+          "type": "K",
+          "level": 1
+        },
+        {
+          "type": "F",
+          "level": 3
+        }
+      ],
+      "project_name": "青岛站"
+    },
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 2
+        },
+        {
+          "type": "T",
+          "level": 2
+        },
+        {
+          "type": "K",
+          "level": 3
+        },
+        {
+          "type": "F",
+          "level": 1
+        }
+      ],
+      "project_name": "临沂站"
+    },
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 1
+        },
+        {
+          "type": "T",
+          "level": 2
+        },
+        {
+          "type": "K",
+          "level": 3
+        },
+        {
+          "type": "F",
+          "level": 2
+        }
+      ],
+      "project_name": "烟台站"
+    },
+    {
+      "alarm_info": [
+        {
+          "type": "L",
+          "level": 1
+        },
+        {
+          "type": "T",
+          "level": 1
+        },
+        {
+          "type": "K",
+          "level": 3
+        },
+        {
+          "type": "F",
+          "level": 3
+        }
+      ],
+      "project_name": "临清站"
+    }
+  ],
+  "AllEcharts":[
+    {
+      "value": {
+        "bian": 28,
+        "ying": 12
+      },
+      "project_name": "济南站"
+    },
+    {
+      "value": {
+        "bian": 50,
+        "ying": 35
+      },
+      "project_name": "潍坊站"
+    },
+    {
+      "value": {
+        "bian": 10,
+        "ying": 16
+      },
+      "project_name": "泰安站"
+    },
+    {
+      "value": {
+        "bian": 28,
+        "ying": 48
+      },
+      "project_name": "菏泽站"
+    },
+    {
+      "value": {
+        "bian": 33,
+        "ying": 33
+      },
+      "project_name": "青岛站"
+    },
+    {
+      "value": {
+        "bian": 10,
+        "ying": 42
+      },
+      "project_name": "临沂站"
+    },
+    {
+      "value": {
+        "bian": 47,
+        "ying": 27
+      },
+      "project_name": "烟台站"
+    },
+    {
+      "value": {
+        "bian": 36,
+        "ying": 18
+      },
+      "project_name": "临清站"
+    }
+  ],
+  "AllCityV":[
+    {
+      "value": 85,
+      "project_name": "济南站"
+    },
+    {
+      "value": 40,
+      "project_name": "潍坊站"
+    },
+    {
+      "value": 30,
+      "project_name": "泰安站"
+    },
+    {
+      "value": 15,
+      "project_name": "菏泽站"
+    },
+    {
+      "value": 35,
+      "project_name": "青岛站"
+    },
+    {
+      "value": 45,
+      "project_name": "临沂站"
+    },
+    {
+      "value": 90,
+      "project_name": "烟台站"
+    },
+    {
+      "value": 78,
+      "project_name": "临清站"
+    }
+  ]
+}

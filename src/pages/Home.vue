@@ -1,0 +1,1797 @@
+<template>
+  <div class="bg">
+    <div class="content_big">
+      <header>
+        <img src="../../static/homeImage/logo.png" alt="">
+        <p class="title_p">
+          <span>铁</span><span>路</span><span>客</span><span>站</span><span>结</span><span>构</span><span>健</span><span>康</span><span>检</span><span>测</span><span>平</span><span>台</span>
+        </p>
+
+      </header>
+      <div class="content_wrap">
+        <div class="left">
+          <div class="left_top">
+            <div class="last_left"></div>
+            <ul class="left_top_ul" style="margin-right:14px">
+              <li>
+                <p class="shuju">数据告警</p>
+                <p class="shuju">数据预警</p>
+                <p class="shuju">设备异常</p>
+              </li>
+              <!--<li class="left_top_li">
+                <ul>
+                  <li>
+                    <p id="count0" class="count0 lcdfont"></p>
+                  </li>
+                  <li>
+                    <p id="count1" class="count1 lcdfont_y"></p>
+                  </li>
+                  <li>
+                    <p id="count2" class="count2 lcdfont_y"></p>
+                  </li>
+                </ul>
+                <p id="left_top_city" class="left_top_city"></p>
+              </li>-->
+              <!--<li v-for="(item,index) in allCount" :key="index">
+                <ul>
+                  <li>
+                    <p class="lcdfont">{{item.data_warning_num>=0&&item.data_warning_num<10
+                      ?'0'+item.data_warning_num:item.data_warning_num}}</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont_y">{{item.count.device_exception_num>=0&&item.device_exception_num<10
+                      ?'0'+item.device_exception_num:item.device_exception_num}}</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont_y">{{item.data_early_warning_num>=0&&item.data_early_warning_num<10
+                      ?'0'+item.data_early_warning_num:item.data_early_warning_num}}</p>
+                  </li>
+                </ul>
+                <p>{{item.project_name}}</p>
+              </li>-->
+              <!--<li>
+                <ul>
+                  <li>
+                    <p class="lcdfont">18</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">10</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">00</p>
+                  </li>
+                </ul>
+                <p>青岛</p>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <p class="lcdfont">18</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">10</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">00</p>
+                  </li>
+                </ul>
+                <p>青岛</p>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <p class="lcdfont">18</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">10</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">00</p>
+                  </li>
+                </ul>
+                <p>青岛</p>
+              </li>-->
+            </ul>
+            <ul class="left_top_ul2">
+              <li>
+                <p class="shuju">数据告警</p>
+                <p class="shuju">数据预警</p>
+                <p class="shuju">设备异常</p>
+              </li>
+              <!--<li class="left_top_li">
+                <ul>
+                  <li>
+                    <p id="count0" class="count0 lcdfont"></p>
+                  </li>
+                  <li>
+                    <p id="count1" class="count1 lcdfont_y"></p>
+                  </li>
+                  <li>
+                    <p id="count2" class="count2 lcdfont_y"></p>
+                  </li>
+                </ul>
+                <p id="left_top_city" class="left_top_city"></p>
+              </li>-->
+              <!--<li v-for="(item,index) in allCount" :key="index">
+                <ul>
+                  <li>
+                    <p class="lcdfont">{{item.data_warning_num>=0&&item.data_warning_num<10
+                      ?'0'+item.data_warning_num:item.data_warning_num}}</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont_y">{{item.count.device_exception_num>=0&&item.device_exception_num<10
+                      ?'0'+item.device_exception_num:item.device_exception_num}}</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont_y">{{item.data_early_warning_num>=0&&item.data_early_warning_num<10
+                      ?'0'+item.data_early_warning_num:item.data_early_warning_num}}</p>
+                  </li>
+                </ul>
+                <p>{{item.project_name}}</p>
+              </li>-->
+              <!--<li>
+                <ul>
+                  <li>
+                    <p class="lcdfont">18</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">10</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">00</p>
+                  </li>
+                </ul>
+                <p>青岛</p>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <p class="lcdfont">18</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">10</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">00</p>
+                  </li>
+                </ul>
+                <p>青岛</p>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <p class="lcdfont">18</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">10</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont">00</p>
+                  </li>
+                </ul>
+                <p>青岛</p>
+              </li>-->
+            </ul>
+            <!--<ul>
+              <li>
+                <p class="shuju">数据告警</p>
+                <p class="shuju">数据预警</p>
+                <p class="shuju">设备异常</p>
+              </li>
+              <li v-for="(item,index) in newCount[1]" :key="index">
+                <ul>
+                  <li>
+                    <p class="lcdfont">{{item.count.data_warning_num>=0&&item.count.data_warning_num<10
+                      ?'0'+item.count.data_warning_num:item.count.data_warning_num}}</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont_y">{{item.count.device_exception_num>=0&&item.count.device_exception_num<10
+                      ?'0'+item.count.device_exception_num:item.count.device_exception_num}}</p>
+                  </li>
+                  <li>
+                    <p class="lcdfont_y">{{item.count.data_early_warning_num>=0&&item.count.data_early_warning_num<10
+                      ?'0'+item.count.data_early_warning_num:item.count.data_early_warning_num}}</p>
+                  </li>
+                </ul>
+                <p>{{item.project_name}}</p>
+              </li>
+            </ul>-->
+          </div>
+          <div class="left_center">
+            <p><img src="../../static/homeImage/titlebg.png" alt="">摄像监控</p>
+            <div class="jiankong">
+              <div>
+                <p>2018-07-19 周四 16:36:00 青岛站</p>
+                <img src="../../static/homeImage/image1.png" alt="">
+              </div>
+              <div>
+                <p>2018-07-19 周四 16:36:00 济南站</p>
+                <img src="../../static/homeImage/image2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="left_bottom">
+            <p><img src="../../static/homeImage/titlebg.png" alt="">各站监测状态</p>
+            <div id="city_jiance"></div>
+            <ul>
+              <li v-for="(item,index) in cityV" :value="index">{{item.value}}%</li>
+            </ul>
+          </div>
+        </div>
+        <div class="center">
+          <div class="center_top">
+            <div class="tuli">
+              <div></div><p>主要铁路线路</p>
+            </div>
+          </div>
+          <div class="center_bottom">
+            <table border="0" style="margin: 0 auto">
+              <tr>
+                <th style="height: 30px">告警区域</th>
+                <th>告警内容</th>
+                <th>时间</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="city jinan">济南站</div>
+                </td>
+                <td class="city_gao">S1设备告警，超出预警值，请加强关注</td>
+                <td class="city_time">2018-07-11</td>
+              </tr>
+              <tr class="qing">
+                <td >
+                  <div class="city qingdao">青岛北站</div>
+                </td>
+                <td class="city_gao">青岛北站s1设备告警，超出预警值，请加强关注</td>
+                <td class="city_time">2018-07-11</td>
+              </tr>
+              <tr>
+                <td >
+                  <div class="city yantai">烟台站</div>
+                </td>
+                <td class="city_gao">S1设备告警，超出预警值，请加强关注</td>
+                <td class="city_time">2018-07-11</td>
+              </tr>
+              <tr>
+                <td >
+                  <div class="city linyi">临沂站</div>
+                </td>
+                <td class="city_gao">S1设备告警，超出预警值，请加强关注</td>
+                <td class="city_time">2018-07-11</td>
+              </tr>
+              <tr>
+                <td >
+                  <div class="city heze">菏泽站</div>
+                </td>
+                <td class="city_gao">S1设备告警，超出预警值100pa，请加强关注</td>
+                <td class="city_time">2018-07-11</td>
+              </tr>
+              <tr>
+                <td >
+                  <div class="city taian">泰安站</div>
+                </td>
+                <td class="city_gao">Y1雨量计超出预警值0.2mm，请关注.Y1雨量计超出预警值0.2mm，请关注.
+                    Y1雨量计超出预警值0.2mm，请关注</td>
+                <td class="city_time">2018-07-11</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="city_gao"></td>
+                <td class="city_time"><router-link to="/warningList">更多&gt;&gt;</router-link></td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+        <div class="right">
+          <div class="right_top">
+            <p><img src="../../static/homeImage/titlebg.png" alt="">客站环境</p>
+            <table>
+              <tr>
+                <th></th>
+                <th>风力</th>
+                <th>温度</th>
+                <th>湿度</th>
+                <th>雨量</th>
+              </tr>
+              <tr v-for="(item,index) in Env" :key="index">
+                <!--s = s.Substring(0,s.Length - 1)-->
+                <td class="city"><p>{{item.project_name.substring(0,2)}}</p></td>
+                <td>
+                  <div :class="item.alarm_info.filter(a=>a.type=='L')[0]?
+                  colorClasses[(item.alarm_info.filter(a=>a.type=='L')[0].level!==undefined?
+                  item.alarm_info.filter(a=>a.type=='L')[0].level:0)]:colorClasses[0]"></div>
+                </td>
+                <td>
+                  <div :class="item.alarm_info.filter(a=>a.type=='T')[0]?
+                  colorClasses[(item.alarm_info.filter(a=>a.type=='T')[0].level!==undefined?
+                  item.alarm_info.filter(a=>a.type=='T')[0].level:0)]:colorClasses[0]"></div>
+                </td>
+                <td>
+                  <div :class="item.alarm_info.filter(a=>a.type=='K')[0]?
+                  colorClasses[(item.alarm_info.filter(a=>a.type=='K')[0].level!==undefined?
+                  item.alarm_info.filter(a=>a.type=='K')[0].level:0)]:colorClasses[0]"></div>
+                </td>
+                <td>
+                  <div :class="item.alarm_info.filter(a=>a.type=='F')[0]?
+                  colorClasses[(item.alarm_info.filter(a=>a.type=='F')[0].level!==undefined?
+                  item.alarm_info.filter(a=>a.type=='F')[0].level:0)]:colorClasses[0]"></div>
+                </td>
+
+              </tr>
+              <!--<tr>
+                <td class="city"><p>青岛</p></td>
+                <td><div class="red_qiu"></div></td>
+                <td><div class="yellow_qiu"></div></td>
+                <td><div class="green_qiu"></div></td>
+                <td><div class="red_qiu"></div></td>
+              </tr>
+              <tr>
+                <td class="city"><p>青岛</p></td>
+                <td><div class="red_qiu"></div></td>
+                <td><div class="yellow_qiu"></div></td>
+                <td><div class="green_qiu"></div></td>
+                <td><div class="red_qiu"></div></td>
+              </tr>
+              <tr>
+                <td class="city"><p>青岛</p></td>
+                <td><div class="red_qiu"></div></td>
+                <td><div class="yellow_qiu"></div></td>
+                <td><div class="green_qiu"></div></td>
+                <td><div class="red_qiu"></div></td>
+              </tr>
+              <tr>
+                <td class="city"><p>青岛</p></td>
+                <td><div class="red_qiu"></div></td>
+                <td><div class="yellow_qiu"></div></td>
+                <td><div class="green_qiu"></div></td>
+                <td><div class="red_qiu"></div></td>
+              </tr>
+              <tr>
+                <td class="city"><p>青岛</p></td>
+                <td><div class="red_qiu"></div></td>
+                <td><div class="yellow_qiu"></div></td>
+                <td><div class="green_qiu"></div></td>
+                <td><div class="red_qiu"></div></td>
+              </tr>
+              <tr>
+                <td class="city"><p>青岛</p></td>
+                <td><div class="red_qiu"></div></td>
+                <td><div class="yellow_qiu"></div></td>
+                <td><div class="green_qiu"></div></td>
+                <td><div class="red_qiu"></div></td>
+              </tr>
+              <tr>
+                <td class="city"><p>青岛</p></td>
+                <td><div class="red_qiu"></div></td>
+                <td><div class="yellow_qiu"></div></td>
+                <td><div class="green_qiu"></div></td>
+                <td><div class="red_qiu"></div></td>
+              </tr>-->
+            </table>
+            <div>
+              <img class="line" src="../../static/homeImage/line.png" alt="">
+              <img class="line" style="top:101px" src="../../static/homeImage/line.png" alt="">
+              <img class="line" style="top:123px" src="../../static/homeImage/line.png" alt="">
+              <img class="line" style="top:145px" src="../../static/homeImage/line.png" alt="">
+              <img class="line" style="top:167px" src="../../static/homeImage/line.png" alt="">
+              <img class="line" style="top:189px" src="../../static/homeImage/line.png" alt="">
+              <img class="line" style="top:211px" src="../../static/homeImage/line.png" alt="">
+            </div>
+
+          </div>
+          <div class="right_center">
+            <p><img src="../../static/homeImage/titlebg.png" alt="">变形异常</p>
+            <div id="city_bian"></div>
+          </div>
+          <div class="right_bottom">
+            <p><img src="../../static/homeImage/titlebg.png" alt="">应力应变异常</p>
+            <div id="city_ying"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<script>
+  import {mapState} from 'vuex'
+	export default {
+	  data(){
+	    return{
+        colorClasses:['gray_qiu','green_qiu','yellow_qiu','red_qiu'],
+        cityV:[],
+        Env:[]
+      }
+    },
+    computed:{
+      ...mapState(['allCount','allEnv','allEch','allCityC']),
+      /*newCount:function(){
+
+        console.log(this.allCount)
+        for(let i=0;i<7;i++){
+          this.allCount.push(this.allCount[0])
+        }
+        return this._sliceArray(this.allCount,4)
+      }*/
+    },
+
+	  mounted(){
+	    let vm = this
+      //let url = 'http://192.168.20.23:50001'
+      let url = 'http://36.110.66.214:50001'
+      //192.168.1.46本机IP
+      function isIE() { //ie?
+        if (!!window.ActiveXObject || "ActiveXObject" in window){
+          //alert(1111111)
+          $('.title_p').html('<span style="background:rgba(255,255,255,0)">铁路客站结构健康检测平台</span>')
+          $('.title_p span').css("color","white")
+          //$('.title_p').css("background","red")
+        }
+      }
+      isIE()
+     //背景高度满屏
+     /*var bodyH = document.body.offsetHeight
+     var $bgH = $(".bg").outerHeight()
+     var $bigHh = $(".content_big").outerHeight()
+     var bgH = document.querySelector('.bg').offsetHeight
+     var bigH = document.querySelector('.content_big').offsetHeight
+      //console.log('body='+bodyH,'c='+bigH,'bg='+bgH)
+     if(bodyH>bigH){
+       //alert(1)
+       //$('.bg').css('height',bodyH)
+     }else {
+       //alert(0)
+       //$('.bg').css('height',722)
+     }*/
+      const ajax1= $.ajax({
+        type: 'get',
+        async: false,
+        cache: true,//36.110.66.214:50001
+        url: url + '/zzcismp/user/login.shtml?username=admin&password=123456',
+        //url: 'http://36.110.66.214:50001/zzcismp/user/login.shtml?username=admin&password=123456',
+        dataType: 'jsonp',
+        jsonp: "callback",
+        success: function () {},
+        error: function () {}
+        //获取后台数据需要先登录
+      })//请求接口先登录
+      $.when(ajax1).done(() =>{
+        //左上角各站预警数据等
+        $.ajax({
+          type: 'get',
+          async: true,
+          cache: true,
+          url: url + '/zzcismp/alarm/getDeviceAlarmGroupProjectCode.shtml',
+          dataType: 'jsonp',
+          jsonp: "callback",
+          success: function (json) {
+            //console.log(json[0].data_warning_num);
+            if(json.length === 8){
+              let newCount = vm._sliceArray(json,4)
+              for(let i=0;i<newCount[0].length;i++){
+                $('.left_top_ul').append('<li class="left_top_li">\n' +
+                  '                <ul>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count0 lcdfont"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count1 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count2 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                </ul>\n' +
+                  '                <p  class="left_top_city"></p>\n' +
+                  '              </li>')
+
+                $('.left_top_ul .left_top_li .count0')[i].innerHTML = newCount[0][i].data_warning_num>=0&&newCount[0][i].data_warning_num<10
+                  ?'0'+newCount[0][i].data_warning_num:newCount[0][i].data_warning_num
+                $('.left_top_ul .left_top_li .count1')[i].innerHTML = newCount[0][i].data_early_warning_num>=0&&newCount[0][i].data_early_warning_num<10
+                  ?'0'+newCount[0][i].data_early_warning_num:newCount[0][i].data_early_warning_num
+                $('.left_top_ul .left_top_li .count2')[i].innerHTML = newCount[0][i].device_exception_num>=0&&newCount[0][i].device_exception_num<10
+                  ?'0'+newCount[0][i].device_exception_num:newCount[0][i].device_exception_num
+
+                $('.left_top_ul .left_top_li .left_top_city')[i].innerHTML = newCount[0][i].project_name
+
+              }
+              for(let i=0;i<newCount[1].length;i++){
+                $('.left_top_ul2').append('<li class="left_top_li">\n' +
+                  '                <ul>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count0 lcdfont"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count1 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count2 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                </ul>\n' +
+                  '                <p  class="left_top_city"></p>\n' +
+                  '              </li>')
+
+                $('.left_top_ul2 .left_top_li .count0')[i].innerHTML = newCount[1][i].data_warning_num>=0&&newCount[1][i].data_warning_num<10
+                  ?'0'+newCount[1][i].data_warning_num:newCount[1][i].data_warning_num
+                $('.left_top_ul2 .left_top_li .count1')[i].innerHTML = newCount[1][i].data_early_warning_num>=0&&newCount[1][i].data_early_warning_num<10
+                  ?'0'+newCount[1][i].data_early_warning_num:newCount[1][i].data_early_warning_num
+                $('.left_top_ul2 .left_top_li .count2')[i].innerHTML = newCount[1][i].device_exception_num>=0&&newCount[1][i].device_exception_num<10
+                  ?'0'+newCount[1][i].device_exception_num:newCount[1][i].device_exception_num
+
+                $('.left_top_ul2 .left_top_li .left_top_city')[i].innerHTML = newCount[1][i].project_name
+
+              }
+            }else {
+              let mData = [{
+                "data_warning_num": 0,
+                "project_code": "37020010",
+                "project_name": "济南",
+                "device_exception_num": 0,
+                "data_early_warning_num": 0
+              },
+                {
+                  "data_warning_num": 0,
+                  "project_code": "37020010",
+                  "project_name": "潍坊",
+                  "device_exception_num": 0,
+                  "data_early_warning_num": 0
+                },
+                {
+                  "data_warning_num": 0,
+                  "project_code": "37020010",
+                  "project_name": "泰安",
+                  "device_exception_num": 0,
+                  "data_early_warning_num": 0
+                },
+                {
+                  "data_warning_num": 0,
+                  "project_code": "37020010",
+                  "project_name": "菏泽",
+                  "device_exception_num": 0,
+                  "data_early_warning_num": 0
+                },
+                {
+                  "data_warning_num": 0,
+                  "project_code": "37020010",
+                  "project_name": "临沂",
+                  "device_exception_num": 0,
+                  "data_early_warning_num": 0
+                },
+                {
+                  "data_warning_num": 0,
+                  "project_code": "37020010",
+                  "project_name": "烟台",
+                  "device_exception_num": 0,
+                  "data_early_warning_num": 0
+                },
+                {
+                  "data_warning_num": 0,
+                  "project_code": "37020010",
+                  "project_name": "临清",
+                  "device_exception_num": 0,
+                  "data_early_warning_num": 0
+                },]
+              json.push(...mData)
+              let newCount = vm._sliceArray(json,4)
+              for(let i=0;i<newCount[0].length;i++){
+                $('.left_top_ul').append('<li class="left_top_li">\n' +
+                  '                <ul>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count0 lcdfont"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count1 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count2 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                </ul>\n' +
+                  '                <p  class="left_top_city"></p>\n' +
+                  '              </li>')
+
+                $('.left_top_ul .left_top_li .count0')[i].innerHTML = newCount[0][i].data_warning_num>=0&&newCount[0][i].data_warning_num<10
+                  ?'0'+newCount[0][i].data_warning_num:newCount[0][i].data_warning_num
+                $('.left_top_ul .left_top_li .count1')[i].innerHTML = newCount[0][i].data_early_warning_num>=0&&newCount[0][i].data_early_warning_num<10
+                  ?'0'+newCount[0][i].data_early_warning_num:newCount[0][i].data_early_warning_num
+                $('.left_top_ul .left_top_li .count2')[i].innerHTML = newCount[0][i].device_exception_num>=0&&newCount[0][i].device_exception_num<10
+                  ?'0'+newCount[0][i].device_exception_num:newCount[0][i].device_exception_num
+
+                $('.left_top_ul .left_top_li .left_top_city')[i].innerHTML = newCount[0][i].project_name
+
+              }
+              for(let i=0;i<newCount[1].length;i++){
+                $('.left_top_ul2').append('<li class="left_top_li">\n' +
+                  '                <ul>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count0 lcdfont"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count1 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                  <li>\n' +
+                  '                    <p  class="count2 lcdfont_y"></p>\n' +
+                  '                  </li>\n' +
+                  '                </ul>\n' +
+                  '                <p  class="left_top_city"></p>\n' +
+                  '              </li>')
+
+                $('.left_top_ul2 .left_top_li .count0')[i].innerHTML = newCount[1][i].data_warning_num>=0&&newCount[1][i].data_warning_num<10
+                  ?'0'+newCount[1][i].data_warning_num:newCount[1][i].data_warning_num
+                $('.left_top_ul2 .left_top_li .count1')[i].innerHTML = newCount[1][i].data_early_warning_num>=0&&newCount[1][i].data_early_warning_num<10
+                  ?'0'+newCount[1][i].data_early_warning_num:newCount[1][i].data_early_warning_num
+                $('.left_top_ul2 .left_top_li .count2')[i].innerHTML = newCount[1][i].device_exception_num>=0&&newCount[1][i].device_exception_num<10
+                  ?'0'+newCount[1][i].device_exception_num:newCount[1][i].device_exception_num
+
+                $('.left_top_ul2 .left_top_li .left_top_city')[i].innerHTML = newCount[1][i].project_name
+
+              }
+            }
+
+          },
+          error: function () {
+            // alert('fail');
+          }
+        })
+        //this.$store.dispatch('getAllCount')
+        //右上风力温度等
+        $.ajax({
+          type: 'get',
+          async: true,
+          cache: true,
+          url: url + '/zzcismp/alarm/getDeviceAlarmGroupProjectCodeAndDeviceType.shtml',
+          data: '',
+          dataType: 'jsonp',
+          jsonp: "callback",
+          success: function (json) {
+            if(json.length===8){
+              vm.Env = json
+            }else {
+              let mData = [
+                {
+                  "project_code": "37020010",
+                  "alarm_info": [
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "T"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "L"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "B"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "A"
+                    }
+                  ],
+                  "project_name": "济南"
+                },
+                {
+                  "project_code": "37020010",
+                  "alarm_info": [
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "T"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "L"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "B"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "A"
+                    }
+                  ],
+                  "project_name": "潍坊"
+                },
+                {
+                  "project_code": "37020010",
+                  "alarm_info": [
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "T"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "L"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "B"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "A"
+                    }
+                  ],
+                  "project_name": "泰安"
+                },
+                {
+                  "project_code": "37020010",
+                  "alarm_info": [
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "T"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "L"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "B"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "A"
+                    }
+                  ],
+                  "project_name": "菏泽"
+                },
+                {
+                  "project_code": "37020010",
+                  "alarm_info": [
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "T"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "L"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "B"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "A"
+                    }
+                  ],
+                  "project_name": "临沂"
+                },
+                {
+                  "project_code": "37020010",
+                  "alarm_info": [
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "T"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "L"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "B"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "A"
+                    }
+                  ],
+                  "project_name": "烟台"
+                },
+                {
+                  "project_code": "37020010",
+                  "alarm_info": [
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "T"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "L"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "B"
+                    },
+                    {
+                      "level": undefined,
+                      "exception_num": 0,
+                      "type": "A"
+                    }
+                  ],
+                  "project_name": "临清"
+                },
+              ]
+              json.push(...mData)
+              vm.Env = json
+            }
+
+          },
+          error: function () {
+
+          }
+        })
+        //this.$store.dispatch('getAllEnv')
+        //中下提示信息
+        $.ajax({
+          type: 'get',
+          async: true,
+          cache: true,
+          url: url + '/zzcismp/alarm/getDeviceAlarmDetail.shtml',
+          data: '',
+          dataType: 'jsonp',
+          jsonp: "callback",
+          success: function (json) {
+            let data = json.data
+            let a = data.filter((item)=>{return item.projname == "青岛北站"})
+            $('.qing .city_gao').text(a[0].alarm_reason)
+            $('.qing .city_time').text(a[0].alarm_time.substring(0,10))
+          },
+          error: function () {
+
+          }
+        })
+        //变形异常
+        $.ajax({
+          type: 'get',
+          async: true,
+          cache: true,
+          url: url + '/zzcismp/alarm/getDeviceAlarmGroupProjectCodeAndDeviceType.shtml',
+          data: {deviceType:'A'},
+          dataType: 'jsonp',
+          jsonp: "callback",
+          success: function (json) {
+            let mData = [
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 2,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "济南"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 3,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "潍坊"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 1,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "泰安"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 4,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "菏泽"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 5,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "临沂"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 1,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "烟台"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 3,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "临清"
+              },
+
+            ]
+            if(json.length===8){
+              vm._bian(json)
+              $('#city_bian').css({background:'none'})
+            }else {
+              setTimeout(()=>{
+                json.push(...mData)
+                vm._bian(json)
+                $('#city_bian').css({background:'none'})
+              },500)
+            }
+
+          },
+          error: function () {
+          }
+        })
+
+        //应力应变异常
+        $.ajax({
+          type: 'get',
+          async: true,
+          cache: true,
+          url: url + '/zzcismp/alarm/getDeviceAlarmGroupProjectCodeAndDeviceType.shtml',
+          data: {deviceType:'B'},
+          dataType: 'jsonp',
+          jsonp: "callback",
+          success: function (json) {
+            let mData = [
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 2,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "济南"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 3,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "潍坊"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 1,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "泰安"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 4,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "菏泽"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 5,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "临沂"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 3,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "烟台"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 2,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "临清"
+              },
+
+            ]
+            if(json.length===8){
+              vm._ying(json)
+              $('#city_ying').css({background:'none'})
+            }else {
+              json.push(...mData)
+              vm._ying(json)
+              $('#city_ying').css({background:'none'})
+            }
+
+          },
+          error: function () {
+          }
+        })
+      })
+
+     this.$store.dispatch('getAllCityV',()=>{
+       this.$nextTick(()=>{
+         this._jiance(this.allCityC)
+         this.cityV = this.allCityC.reverse()
+       })
+     })
+      /*this.$store.dispatch('getAllEch',()=>{
+        this.$nextTick(()=>{
+          document.getElementById('city_bian').innerHTML = '<img src="../../static/homeImage/aaa.gif" alt="">'
+          $('#city_bian img').css({transform:'translate(64px,76px)',opacity:0.6})
+          setTimeout(()=>{this._bian(this.allEch)},5000)
+          this._ying(this.allEch)
+        })
+      })*/
+    },
+    methods:{
+	    _jiance(json){
+	      json = json.reverse()
+        let cityName = []
+        let cityC = []
+        for(let i=0;i<json.length;i++){
+          cityName.push(json[i].project_name.substring(0,2))
+          cityC.push(json[i].value)
+        }
+	      let vm = this
+        let myChart = vm.$echarts.init(document.getElementById('city_jiance'));
+        // 指定图表的配置项和数据
+        let option = {
+          //提示框
+          tooltip: {
+            trigger: "axis",
+            formatter:'{b1}: {c1}%'
+          },
+          grid: {
+            top:'1%',
+            left: '5%',
+            right: '12%',
+            bottom: '7%',
+            containLabel: true
+          },
+          xAxis: {
+            type : 'value',
+            show:true,
+            axisTick: {
+              show: false
+            },
+            axisLine:{
+              lineStyle:{
+                color: '#fff'
+              },
+            },
+            axisLabel:{
+              show:false,
+              color:'#fff',
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            splitLine:{
+              show:false,
+            },
+          },
+          yAxis: {
+            type : 'category',
+            axisTick: {
+              show: false
+            },
+            axisLine:{
+              lineStyle:{
+                color: '#fff'
+              },
+            },
+
+            axisLabel:{
+              color:'#fff',
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            data:cityName,
+            splitLine:{
+              show:false,
+            },
+          },
+          series: [
+            {
+              name: '',
+              type: 'bar',
+              stack:'健康情况1',
+              barWidth: 12,
+              barGap:'-100%',
+              data: [100, 100, 100, 100, 100, 100, 100, 100],
+              //data: [15, 60, 70, 85, 70, 60, 10, 22],
+              itemStyle:{
+                normal:{
+                  label: {
+                    show: false,
+                    position: 'right',
+                    textStyle: {
+                      color: '#fff'
+                    }
+                  },
+                  color:"rgba(0,210,233,0.2)",
+                },
+              }
+            },
+            {
+            name: '',
+            type: 'bar',
+            stack:'健康情况',
+            barWidth: 12,
+            data: cityC,
+            itemStyle: {
+              normal : {
+                label: {
+                  show: false,
+                  position: 'right',
+                  textStyle: {
+                    color: '#fff'
+                  }
+                },
+
+                color: function(params) {
+                  var colorList = ['#ed1e79', '#fcee21','#00d2e9'];
+                  if (params.data <= 20) {
+                    return colorList[0];
+                  } else if (params.data > 20 && params.data <= 40) {
+                    return colorList[1];
+                  } else if (params.data > 40) {
+                    return colorList[2];
+                  }
+                }
+              },
+            },
+          },
+          ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+      },
+      _bian(json){
+	      let cityName = []
+        let cityBian = []
+	      for(let i=0;i<json.length;i++){
+          cityName.push(json[i].project_name.substring(0,2))
+          cityBian.push(json[i].alarm_info[0].exception_num)
+        }
+        let vm = this
+        let myChart = vm.$echarts.init(document.getElementById('city_bian'));
+        let option = {
+          //提示框
+          tooltip: {
+            trigger: "axis",
+            formatter:'{b0}: {c0}'
+          },
+          color:['#06beff'],
+          legend: {
+            itemWidth:12,
+            itemHeight:12,
+            x:240,
+            y:-6,
+            textStyle:{//图例文字的样式
+              color:'#fff',
+              fontSize:12
+            },
+            data:[{
+              name:'变形',
+              icon:'rect',
+              color:'red',
+            }],
+          },
+          grid: {
+            top:'18%',
+            left: '5%',
+            right: '7%',
+            bottom: '14%',
+            containLabel: true
+          },
+          xAxis: {
+            type : 'category',
+            show:true,
+            data:cityName,
+            boundaryGap : false,
+            axisTick: {
+              show: false
+            },
+            axisLine:{
+              lineStyle:{
+                color: '#fff'
+              },
+            },
+            axisLabel:{
+              interval:0,
+              show:true,
+              color:'#fff',
+              textStyle: {
+                color: '#fff',
+                fontSize: 12
+              }
+            },
+            splitLine:{
+              show:false,//网格线
+            },
+          },
+          yAxis: {
+            name:'单位',
+            nameTextStyle:{
+              fontSize:10
+            },
+            type : 'value',
+            axisTick: {
+              show: false
+            },
+            axisLine:{
+              lineStyle:{
+                color: '#fff'
+              },
+            },
+            axisLabel:{
+              color:'#fff',
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            splitLine:{
+              show:false,
+            },
+          },
+          series: [
+            {
+              name: '变形',
+              type: 'line',
+              stack:'健康情况',
+              barWidth: 12,
+              data: cityBian,
+              itemStyle: {
+                normal: {
+                  color: '#06beff',
+                  lineStyle: {
+                    color: '#06beff',
+                  },
+                  areaStyle:
+                    {type: 'default',
+                      color: new vm.$echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                          {offset: 0, color: 'rgba(6,190,255,.9)'},
+                          {offset: 0.5, color: 'rgba(6,190,255,.4)'},
+                          {offset: 1, color: 'rgba(6,190,255,.1)'}
+                        ]
+                      )
+                    }
+                },
+
+              },
+            },
+
+          ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+      },
+      _ying(json){
+        let cityName = []
+        let cityYing = []
+        for(let i=0;i<json.length;i++){
+          cityName.push(json[i].project_name.substring(0,2))
+          cityYing.push(json[i].alarm_info[0].exception_num)
+    }
+        let vm = this
+        let myChart = vm.$echarts.init(document.getElementById('city_ying'));
+        let option = {
+          //提示框
+          tooltip: {
+            trigger: "axis",
+            formatter:'{b0}: {c0}'
+          },
+          grid: {
+            top:'18%',
+            left: '5%',
+            right: '7%',
+            bottom: '14%',
+            containLabel: true
+          },
+          color:['#ed1e79'],
+          legend: {
+            itemWidth:12,
+            itemHeight:12,
+            x:240,
+            y:-6,
+            textStyle:{//图例文字的样式
+              color:'#fff',
+              fontSize:12
+            },
+            data:[{
+              name:'应力应变',
+              icon:'rect',
+              color:'red',
+            }],
+          },
+          xAxis: {
+            type : 'category',
+            show:true,
+            data:cityName,
+            boundaryGap : true,//和y轴有距离
+            axisTick: {
+              show: false
+            },
+            axisLine:{
+              lineStyle:{
+                color: '#fff'
+              },
+            },
+            axisLabel:{
+              interval:0,
+              show:true,
+              color:'#fff',
+              textStyle: {
+                color: '#fff',
+                fontSize: 12
+              }
+            },
+            splitLine:{
+              show:false,//网格线
+            },
+          },
+          yAxis: {
+            name:'单位',
+            nameTextStyle:{
+              fontSize:10
+            },
+            type : 'value',
+            axisTick: {
+              show: false
+            },
+            axisLine:{
+              lineStyle:{
+                color: '#fff'
+              },
+            },
+            axisLabel:{
+              color:'#fff',
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            splitLine:{
+              show:false,
+            },
+          },
+          series: [
+            {
+              name: '应力应变',
+              type: 'line',
+              stack:'健康情况',
+              symbol:'none',  //去掉点的
+              smooth:true,  //让曲线变平滑
+              barWidth: 12,
+              data: cityYing,
+              itemStyle: {
+                normal: {
+                  lineStyle: {
+                    color: '#ed1e79',
+                  },
+                },
+              },
+            },
+
+          ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+      },
+
+        /** 将一个数组分成几个同等长度的数组
+         array[分割的原数组]
+         size[每个子数组的长度]*/
+
+      _sliceArray(array, size) {
+      var result = [];
+      for (var x = 0; x < Math.ceil(array.length / size); x++) {
+        var start = x * size;
+        var end = start + size;
+        result.push(array.slice(start, end));
+      }
+      return result;
+      },
+
+    }
+  }
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus">
+  @font-face{
+    font-family: 'lcdfont2';
+    src: url('../../static/css/lcdfont2/ds-digit-webfont.woff'); /* IE9 Compat Modes */
+    src: url('../../static/css/lcdfont2/ds-digit-webfont.woff?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../static/css/lcdfont2/ds-digit-webfont.woff') format('woff'), /* Modern Browsers */
+    url('../../static/css/lcdfont2/ds-digit-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../../static/css/lcdfont2/ds-digit-webfont.woff') format('svg'); /* Legacy iOS */
+    }
+  .bg
+    background-image url('../../static/homeImage/bg.png')
+    background-size 100% 100%
+    background-repeat no-repeat
+    width 100%
+    height 100%
+    min-width 1200px
+    min-height 747px
+    .content_big
+      width 1200px
+      margin 0 auto
+      padding-right 10px
+      box-sizing border-box
+      overflow hidden
+      header
+        position relative
+        img
+          margin-top -24px
+          width 100%
+        .title_p
+          position absolute
+          top 36%
+          left 50%
+          transform translate(-50%,-50%)
+          font-family '微软雅黑'
+          font-size 24px
+          font-weight 900
+          letter-spacing 1px
+          span
+            background: linear-gradient(to right, #fff, #fff, #979797)
+            -webkit-background-clip text
+            color transparent
+
+      .content_wrap
+        display flex
+        justify-content space-between
+        .left
+          .left_top
+            display flex
+            width 288px
+            height 198px
+            >.last_left
+              width 18px
+              height 174px
+              background-image url('../../static/homeImage/lan.png')
+              background-size 100% 100%
+            >ul
+              width 128px
+              margin-top -16px
+              >li
+                width 128px
+                height 44px
+                margin-top 6px
+                background-image url("../../static/homeImage/shuju.png")
+                background-size 100% 100%
+                >ul
+                  display flex
+                  >li
+                    width 42px
+                    text-align center
+                    >.lcdfont
+                      font-family lcdfont2
+                      font-size 26px
+                      color #ff0000
+                      margin-top 1px
+                    >.lcdfont_y
+                      font-family lcdfont2
+                      font-size 26px
+                      color #fbb03b
+                      margin-top 1px
+                >p
+                  text-align center
+                  color #f9f9f9
+                  font-size 12px
+                  margin-top -2px
+              >:nth-child(1)
+                width 128px
+                height 20px
+                background rgba(42,58,116,.7)
+                display flex
+                margin-bottom -4px
+                >.shuju
+                  white-space:nowrap
+                  font-size 12px
+                  transform: scale(0.76) translate(4px,0px)
+                  color #f2f2f2
+                  margin-left -6px
+                  margin-top 2px
+          .left_center
+            width 270px
+            height 170px
+            background url("../../static/homeImage/jiankong.png")
+            background-size 100% 100%
+            margin 20px 0 0 18px
+            >p
+              font-size 15px
+              padding 10px 10px
+              float left
+              color #fff
+              //background url("../../static/homeImage/titlebg.png")
+              position relative
+              img
+                position absolute
+                top -4px
+                left -12px
+                width 130%
+                height 120%
+                opacity 0.6
+            >.jiankong
+              width 246px
+              height 122px
+              margin 0 auto
+              display flex
+              justify-content space-around
+              transform translate(0,-4px)
+              >div
+                width 49%
+                height 100%
+                position relative
+                p
+                  position absolute
+                  background rgba(10,10,10,.7)
+                  color #fff
+                  font-size 12px
+                img
+                  width 100%
+                  height 100%
+          .left_bottom
+            width 270px
+            height 244px
+            margin 12px 0 0 18px
+            background-image url("../../static/homeImage/kuang1.png")
+            background-size 100% 100%
+
+            >p
+              font-size 15px
+              padding 10px 10px
+              float left
+              color #fff
+              position relative
+              img
+                position absolute
+                top -4px
+                left -12px
+                width 130%
+                height 120%
+                opacity 0.6
+            >#city_jiance
+              height 204px
+            >ul
+              width 30px
+              color #fff
+              transform translate(240px, -158px)
+              >li
+                height 23.2px
+        .center
+          width 580px
+          .center_top
+            position relative
+            width 580px
+            height 388px
+            margin-left 10px
+            background-image url("../../static/homeImage/shandong.png")
+            background-size 100% 100%
+            .tuli //图例
+              position absolute
+              bottom 38px
+              right 58px
+              display flex
+              align-items center
+              div
+                width 20px
+                height 2px
+                background #cf7a00
+              p
+                font-size 12px
+                color #fff
+          .center_bottom
+            width 580px
+            height 244px
+            table
+              tr
+                th
+                  font-size 15px
+                  color #fff
+                .city
+                  width 100px
+                  height 22px
+                  line-height 22px
+                  background-size 100% 100%
+                  background-repeat no-repeat
+                  color #e6e6e6
+                  font-size 14px
+                .jinan
+                  background-image url("../../static/homeImage/zhansuo1.png")
+                .qingdao
+                  background-image url("../../static/homeImage/zhansuo2.png")
+                .yantai
+                  background-image url("../../static/homeImage/button3.png")
+                .linyi
+                  background-image url("../../static/homeImage/zhansuo4.png")
+                .heze
+                  background-image url("../../static/homeImage/button5.png")
+                .taian
+                  background-image url("../../static/homeImage/zhansuo8.png")
+                .city_gao
+                  width 360px
+                  height 32px
+                  line-height 32px
+                  display inline-block
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  padding 0 20px
+                  text-align left
+                  color #e6e6e6
+                  font-size 12px
+
+
+                .city_time
+                  color #e6e6e6
+                a
+                  color #06beff
+                  float right
+        .right
+          width 326px
+          .right_top
+            position relative
+            width 326px
+            height 245px
+            margin 0 auto
+            background-image url("../../static/homeImage/kuang3.png")
+            background-size 100% 100%
+            >p
+              font-size 15px
+              padding 10px 10px
+              float left
+              color #fff
+              position relative
+              img
+                position absolute
+                top -4px
+                left -12px
+                width 130%
+                height 120%
+                opacity 0.6
+            table
+              position absolute
+              width 289px
+              top 26px
+              left 14px
+              th
+                height 24px
+                font-size 14px
+                color #fff
+              .red_qiu
+                width 6px
+                height 6px
+                background linear-gradient(to right, rgb(238,45,36),rgb(241,90,36),rgb(241,90,36))
+                border-radius 50%
+                box-shadow 0 0 10px 1px rgba(238,45,36,.9)
+              .yellow_qiu
+                width 6px
+                height 6px
+                background linear-gradient(to right, rgb(247,154,30),rgb(252,238,30),rgb(252,238,30))
+                border-radius 50%
+                box-shadow 0 0 10px 1px rgba(247,154,30,.9)
+              .green_qiu
+                width 6px
+                height 6px
+                background linear-gradient(to right, rgb(8,115,58),rgb(57,181,74),rgb(57,181,74))
+                border-radius 50%
+                box-shadow 0 0 10px 1px rgba(8,115,58,.9)
+              .gray_qiu
+                width 6px
+                height 6px
+                background linear-gradient(to right, rgb(109, 109, 109),rgb(127, 127, 127),rgb(127, 127, 127))
+                border-radius 50%
+                box-shadow 0 0 10px 1px rgba(109, 109, 109,.9)
+              .city
+                width 80px
+                color #fff
+                font-size 13px
+                padding  0 5px
+                >p
+                  width 40px
+                  height 22px
+                  line-height 22px
+                  text-align left
+              td
+                >div
+                  margin 0 26px
+            .line
+              position absolute
+              top 79px
+              left 28px
+              width 290px
+              height 2px
+          .right_center,.right_bottom
+            width 326px
+            height 176px
+            margin 20px auto
+            background-image url("../../static/homeImage/kuang4.png")
+            background-size 100% 100%
+            >p
+              font-size 15px
+              padding 10px 10px
+              float left
+              color #fff
+              position relative
+              img
+                position absolute
+                top -4px
+                left -12px
+                width 130%
+                height 120%
+                opacity 0.6
+            #city_bian,#city_ying
+              background url('../../static/homeImage/aaa.gif') no-repeat 50% 70%
+              height 140px
+          .right_bottom
+            background-image url("../../static/homeImage/k5.png")
+</style>

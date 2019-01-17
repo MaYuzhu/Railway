@@ -14,9 +14,9 @@
             <div class="last_left"></div>
             <ul class="left_top_ul" style="margin-right:14px">
               <li>
-                <p class="shuju">数据告警</p>
-                <p class="shuju">数据预警</p>
-                <p class="shuju">设备异常</p>
+                <p class="shuju">数据预警</p><!--数据告警-->
+                <p class="shuju">数据异常</p><!--数据预警-->
+                <p class="shuju">设备故障</p><!--设备异常-->
               </li>
               <!--<li class="left_top_li">
                 <ul>
@@ -94,9 +94,9 @@
             </ul>
             <ul class="left_top_ul2">
               <li>
-                <p class="shuju">数据告警</p>
                 <p class="shuju">数据预警</p>
-                <p class="shuju">设备异常</p>
+                <p class="shuju">数据异常</p>
+                <p class="shuju">设备故障</p>
               </li>
               <!--<li class="left_top_li">
                 <ul>
@@ -201,7 +201,7 @@
             <p><img src="../../static/homeImage/titlebg.png" alt="">摄像监控</p>
             <div class="jiankong">
               <div>
-                <p>2018-07-19 周四 16:36:00 青岛站</p>
+                <p>2018-07-19 周四 16:36:00 青岛北站</p>
                 <img src="../../static/homeImage/image1.png" alt="">
               </div>
               <div>
@@ -220,6 +220,7 @@
         </div>
         <div class="center">
           <div class="center_top">
+            <a href="#/qingdaobei"></a>
             <div class="tuli">
               <div></div><p>主要铁路线路</p>
             </div>
@@ -231,13 +232,6 @@
                 <th>告警内容</th>
                 <th>时间</th>
               </tr>
-              <tr>
-                <td>
-                  <div class="city jinan">济南站</div>
-                </td>
-                <td class="city_gao">S1设备告警，超出预警值，请加强关注</td>
-                <td class="city_time">2018-07-11</td>
-              </tr>
               <tr class="qing">
                 <td >
                   <div class="city qingdao">青岛北站</div>
@@ -246,32 +240,39 @@
                 <td class="city_time">2018-07-11</td>
               </tr>
               <tr>
-                <td >
-                  <div class="city yantai">烟台站</div>
+                <td>
+                  <div class="city jinan">青岛西站</div>
                 </td>
                 <td class="city_gao">S1设备告警，超出预警值，请加强关注</td>
                 <td class="city_time">2018-07-11</td>
               </tr>
               <tr>
                 <td >
-                  <div class="city linyi">临沂站</div>
+                  <div class="city yantai">济南站</div>
                 </td>
                 <td class="city_gao">S1设备告警，超出预警值，请加强关注</td>
                 <td class="city_time">2018-07-11</td>
               </tr>
               <tr>
                 <td >
-                  <div class="city heze">菏泽站</div>
+                  <div class="city linyi">潍坊站</div>
                 </td>
-                <td class="city_gao">S1设备告警，超出预警值100pa，请加强关注</td>
+                <td class="city_gao">S1设备告警，超出预警值，请加强关注</td>
+                <td class="city_time">2018-07-11</td>
+              </tr>
+              <tr>
+                <td >
+                  <div class="city heze">烟台站</div>
+                </td>
+                <td class="city_gao">S1设备告警，超出预警值100pa，请加强关注。Y1雨量计超出预警值0.2mm，请关注.
+                  Y1雨量计超出预警值0.2mm，请关注</td>
                 <td class="city_time">2018-07-11</td>
               </tr>
               <tr>
                 <td >
                   <div class="city taian">泰安站</div>
                 </td>
-                <td class="city_gao">Y1雨量计超出预警值0.2mm，请关注.Y1雨量计超出预警值0.2mm，请关注.
-                    Y1雨量计超出预警值0.2mm，请关注</td>
+                <td class="city_gao">Y1雨量计超出预警值0.2mm，请关注.</td>
                 <td class="city_time">2018-07-11</td>
               </tr>
               <tr>
@@ -296,7 +297,7 @@
               </tr>
               <tr v-for="(item,index) in Env" :key="index">
                 <!--s = s.Substring(0,s.Length - 1)-->
-                <td class="city"><p>{{item.project_name.substring(0,2)}}</p></td>
+                <td class="city"><p>{{item.project_name.substring(0,3)}}</p></td>
                 <td>
                   <div :class="item.alarm_info.filter(a=>a.type=='L')[0]?
                   colorClasses[(item.alarm_info.filter(a=>a.type=='L')[0].level!==undefined?
@@ -381,11 +382,11 @@
 
           </div>
           <div class="right_center">
-            <p><img src="../../static/homeImage/titlebg.png" alt="">变形异常</p>
+            <p><img src="../../static/homeImage/titlebg.png" alt="">各站点异常统计</p>
             <div id="city_bian"></div>
           </div>
           <div class="right_bottom">
-            <p><img src="../../static/homeImage/titlebg.png" alt="">应力应变异常</p>
+            <p><img src="../../static/homeImage/titlebg.png" alt="">多维度异常统计</p>
             <div id="city_ying"></div>
           </div>
         </div>
@@ -420,7 +421,7 @@
 	  mounted(){
 	    let vm = this
       //let url = 'http://192.168.20.23:50001'
-      let url = 'http://36.110.66.214:50001'
+      let url = all_url
       //192.168.1.46本机IP
       function isIE() { //ie?
         if (!!window.ActiveXObject || "ActiveXObject" in window){
@@ -533,14 +534,7 @@
                 {
                   "data_warning_num": 0,
                   "project_code": "37020010",
-                  "project_name": "潍坊",
-                  "device_exception_num": 0,
-                  "data_early_warning_num": 0
-                },
-                {
-                  "data_warning_num": 0,
-                  "project_code": "37020010",
-                  "project_name": "泰安",
+                  "project_name": "烟台",
                   "device_exception_num": 0,
                   "data_early_warning_num": 0
                 },
@@ -554,14 +548,21 @@
                 {
                   "data_warning_num": 0,
                   "project_code": "37020010",
-                  "project_name": "临沂",
+                  "project_name": "青岛西站",
                   "device_exception_num": 0,
                   "data_early_warning_num": 0
                 },
                 {
                   "data_warning_num": 0,
                   "project_code": "37020010",
-                  "project_name": "烟台",
+                  "project_name": "潍坊",
+                  "device_exception_num": 0,
+                  "data_early_warning_num": 0
+                },
+                {
+                  "data_warning_num": 0,
+                  "project_code": "37020010",
+                  "project_name": "泰安",
                   "device_exception_num": 0,
                   "data_early_warning_num": 0
                 },
@@ -672,7 +673,7 @@
                       "type": "A"
                     }
                   ],
-                  "project_name": "济南"
+                  "project_name": "青岛西站"
                 },
                 {
                   "project_code": "37020010",
@@ -698,7 +699,7 @@
                       "type": "A"
                     }
                   ],
-                  "project_name": "潍坊"
+                  "project_name": "济南站"
                 },
                 {
                   "project_code": "37020010",
@@ -724,7 +725,7 @@
                       "type": "A"
                     }
                   ],
-                  "project_name": "泰安"
+                  "project_name": "潍坊站"
                 },
                 {
                   "project_code": "37020010",
@@ -750,7 +751,7 @@
                       "type": "A"
                     }
                   ],
-                  "project_name": "菏泽"
+                  "project_name": "烟台站"
                 },
                 {
                   "project_code": "37020010",
@@ -776,7 +777,7 @@
                       "type": "A"
                     }
                   ],
-                  "project_name": "临沂"
+                  "project_name": "泰安站"
                 },
                 {
                   "project_code": "37020010",
@@ -802,7 +803,7 @@
                       "type": "A"
                     }
                   ],
-                  "project_name": "烟台"
+                  "project_name": "菏泽站"
                 },
                 {
                   "project_code": "37020010",
@@ -828,7 +829,7 @@
                       "type": "A"
                     }
                   ],
-                  "project_name": "临清"
+                  "project_name": "临清站"
                 },
               ]
               json.push(...mData)
@@ -876,22 +877,22 @@
                 "alarm_info": [
                   {
                     "level": 0,
-                    "exception_num": 2,
+                    "exception_num": 1,
                     "type": "A"
                   }
                 ],
-                "project_name": "济南"
+                "project_name": "青岛西站"
               },
               {
                 "project_code": "37020010",
                 "alarm_info": [
                   {
                     "level": 0,
-                    "exception_num": 3,
+                    "exception_num": 2,
                     "type": "A"
                   }
                 ],
-                "project_name": "潍坊"
+                "project_name": "济南站"
               },
               {
                 "project_code": "37020010",
@@ -902,7 +903,40 @@
                     "type": "A"
                   }
                 ],
-                "project_name": "泰安"
+                "project_name": "潍坊站"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 3,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "烟台站"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 2,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "泰安站"
+              },
+              {
+                "project_code": "37020010",
+                "alarm_info": [
+                  {
+                    "level": 0,
+                    "exception_num": 1,
+                    "type": "A"
+                  }
+                ],
+                "project_name": "菏泽站"
               },
               {
                 "project_code": "37020010",
@@ -913,40 +947,7 @@
                     "type": "A"
                   }
                 ],
-                "project_name": "菏泽"
-              },
-              {
-                "project_code": "37020010",
-                "alarm_info": [
-                  {
-                    "level": 0,
-                    "exception_num": 5,
-                    "type": "A"
-                  }
-                ],
-                "project_name": "临沂"
-              },
-              {
-                "project_code": "37020010",
-                "alarm_info": [
-                  {
-                    "level": 0,
-                    "exception_num": 1,
-                    "type": "A"
-                  }
-                ],
-                "project_name": "烟台"
-              },
-              {
-                "project_code": "37020010",
-                "alarm_info": [
-                  {
-                    "level": 0,
-                    "exception_num": 3,
-                    "type": "A"
-                  }
-                ],
-                "project_name": "临清"
+                "project_name": "临清站"
               },
 
             ]
@@ -971,8 +972,10 @@
           type: 'get',
           async: true,
           cache: true,
-          url: url + '/zzcismp/alarm/getDeviceAlarmGroupProjectCodeAndDeviceType.shtml',
-          data: {deviceType:'B'},
+          //url: url + '/zzcismp/alarm/getDeviceAlarmGroupProjectCodeAndDeviceType.shtml',
+          url: url+'/zzcismp/alarm/getDeviceAlarmGroupBuildCode.shtml',
+          //data: {deviceType:'B'},
+          data: {projectCode:37020010},
           dataType: 'jsonp',
           jsonp: "callback",
           success: function (json) {
@@ -1056,7 +1059,7 @@
               },
 
             ]
-            if(json.length===8){
+            if(true){
               vm._ying(json)
               $('#city_ying').css({background:'none'})
             }else {
@@ -1092,7 +1095,7 @@
         let cityName = []
         let cityC = []
         for(let i=0;i<json.length;i++){
-          cityName.push(json[i].project_name.substring(0,2))
+          cityName.push(json[i].project_name.substring(0,3))
           cityC.push(json[i].value)
         }
 	      let vm = this
@@ -1215,7 +1218,7 @@
 	      let cityName = []
         let cityBian = []
 	      for(let i=0;i<json.length;i++){
-          cityName.push(json[i].project_name.substring(0,2))
+          cityName.push(json[i].project_name.substring(0,3))
           cityBian.push(json[i].alarm_info[0].exception_num)
         }
         let vm = this
@@ -1237,23 +1240,23 @@
               fontSize:12
             },
             data:[{
-              name:'变形',
+              name:'异常',
               icon:'rect',
               color:'red',
             }],
           },
           grid: {
-            top:'18%',
+            top:'20%',
             left: '5%',
             right: '7%',
-            bottom: '14%',
+            bottom: '4%',
             containLabel: true
           },
           xAxis: {
             type : 'category',
             show:true,
             data:cityName,
-            boundaryGap : false,
+            boundaryGap : true,//和y轴没有距离false
             axisTick: {
               show: false
             },
@@ -1264,6 +1267,7 @@
             },
             axisLabel:{
               interval:0,
+              rotate:40,
               show:true,
               color:'#fff',
               textStyle: {
@@ -1276,7 +1280,7 @@
             },
           },
           yAxis: {
-            name:'单位',
+            name:'单位(个)',
             nameTextStyle:{
               fontSize:10
             },
@@ -1299,10 +1303,11 @@
               show:false,
             },
           },
+          minInterval:1,
           series: [
             {
-              name: '变形',
-              type: 'line',
+              name: '异常',
+              type: 'bar',
               stack:'健康情况',
               barWidth: 12,
               data: cityBian,
@@ -1336,10 +1341,11 @@
       _ying(json){
         let cityName = []
         let cityYing = []
+
         for(let i=0;i<json.length;i++){
-          cityName.push(json[i].project_name.substring(0,2))
-          cityYing.push(json[i].alarm_info[0].exception_num)
-    }
+          cityName.push(json[i].buildname)
+          cityYing.push(json[i].num)
+        }
         let vm = this
         let myChart = vm.$echarts.init(document.getElementById('city_ying'));
         let option = {
@@ -1349,10 +1355,10 @@
             formatter:'{b0}: {c0}'
           },
           grid: {
-            top:'18%',
+            top:'20%',
             left: '5%',
             right: '7%',
-            bottom: '14%',
+            bottom: '2%',
             containLabel: true
           },
           color:['#ed1e79'],
@@ -1366,7 +1372,7 @@
               fontSize:12
             },
             data:[{
-              name:'应力应变',
+              name:'异常',
               icon:'rect',
               color:'red',
             }],
@@ -1386,6 +1392,7 @@
             },
             axisLabel:{
               interval:0,
+              rotate:40,
               show:true,
               color:'#fff',
               textStyle: {
@@ -1398,7 +1405,7 @@
             },
           },
           yAxis: {
-            name:'单位',
+            name:'单位(个)',
             nameTextStyle:{
               fontSize:10
             },
@@ -1421,10 +1428,11 @@
               show:false,
             },
           },
+          minInterval:1,
           series: [
             {
-              name: '应力应变',
-              type: 'line',
+              name: '异常',
+              type: 'bar',
               stack:'健康情况',
               symbol:'none',  //去掉点的
               smooth:true,  //让曲线变平滑
@@ -1649,6 +1657,13 @@
               p
                 font-size 12px
                 color #fff
+            a
+              display block
+              width 30px
+              height 20px
+              position absolute
+              right 155px
+              bottom 175px
           .center_bottom
             width 580px
             height 244px

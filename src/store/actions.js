@@ -1,7 +1,8 @@
 import {//reqAllCount,
         reqAllEnv,
         reqAllEchart,
-        reqAllCityV} from '../tools/index'
+        reqAllCityV
+        } from '../tools/index'
 
 import {reqAllCount}from '../api/index'
 

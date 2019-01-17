@@ -6,6 +6,8 @@ import login from '../pages/login/login.vue'
 import Home from '../pages/Home.vue'
 import warningList from '../pages/warningList.vue'
 
+import qingdaobei from '../pages/qingdaobei_img'
+
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +23,13 @@ export default new Router({
     {
       path:'/warningList',
       component:warningList,
+      meta:{
+        showHeader:false
+      }
+    },
+    {
+      path:'/qingdaobei',
+      component:qingdaobei,
       meta:{
         showHeader:false
       }
